@@ -3,7 +3,7 @@
 
 dtCCMTest::dtCCMTest(QWidget *parent)
 	: QMainWindow(parent),m_pImgView(new CCMViewBar), m_pConfigDlg(new CCMConfigDlg(this)),\
-	m_pCCMLog(new CCMLogBar()), m_pLabStatus(new QLabel("")), m_pConfigCombox(new QComboBox())
+	m_pCCMLog(new CCMLogBar()), m_pLabStatus(new QLabel("")), m_pConfigCombox(new QComboBox()),m_pButAddConfig(new QPushButton("New"))
 {
 	ui.setupUi(this);
 	setWindowIcon(QIcon(":/dtCCMTest/Resources/Login.ico"));
@@ -13,7 +13,20 @@ dtCCMTest::dtCCMTest(QWidget *parent)
 	createView();
 	loadStyleFile("./style.qss");
 	connect(this, SIGNAL(sgl_addLog(QString, QColor)), m_pCCMLog, SLOT(slot_addLog(QString, QColor)));
-	
+	connect(m_pConfigDlg, SIGNAL(sgl_addLog(QString, QColor)), m_pCCMLog, SLOT(slot_addLog(QString, QColor)));
+
+	//initial database
+	m_configDatabase = QSqlDatabase::addDatabase("QSQLITE", "configquery");
+	m_configDatabase.setDatabaseName("./configDatabase");
+	if (!m_configDatabase.open()) {
+		emit sgl_addLog("config database connect fail!");
+		QSqlDatabase::removeDatabase("configquery");
+		return ;
+	}
+	else {
+		emit sgl_addLog("config database connect success!",QColor(0,255,0));
+	}
+
 }
 dtCCMTest::~dtCCMTest()
 {
@@ -48,8 +61,9 @@ void dtCCMTest::createView() {
 	QHBoxLayout *hlayout = new QHBoxLayout;
 	m_pLabStatus->setFixedSize(30, 30);
 	hlayout->addWidget(m_pLabStatus);
-	hlayout->addWidget(m_pConfigCombox);
-	//hlayout->addStretch(5);
+	hlayout->addWidget(m_pButAddConfig);
+	hlayout->addWidget(m_pConfigCombox,5);
+	m_pConfigCombox->addItem("add new rule");
 
 	QVBoxLayout *vlayout = new QVBoxLayout();
 	vlayout->addLayout(hlayout);

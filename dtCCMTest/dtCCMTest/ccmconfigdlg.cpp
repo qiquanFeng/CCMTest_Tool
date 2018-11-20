@@ -1,14 +1,17 @@
 #include "ccmconfigdlg.h"
 
 CCMConfigDlg::CCMConfigDlg(QWidget *parent)
-	: QDialog(parent), m_pTabGroup(new QTabWidget())
+	: QDialog(parent), m_pTabGroup(new QTabWidget()),m_pDatabase(QSqlDatabase::addDatabase("QSQLITE","configDatabase"))
 {
 	createUI();
 	m_pSetting = new QSettings("D:/sensor.ini", QSettings::IniFormat);
 	bool bstatus = m_pSetting->contains("Sensor/width");
 	int i = 1;
 	
-	
+	m_pDatabase.setDatabaseName(QDir::currentPath()+"/ConfigDatabase");
+	if (!m_pDatabase.open()) {
+		return;
+	}
 
 	return;
 }
@@ -81,5 +84,9 @@ void CCMConfigDlg::createUI() {
 
 	setFixedSize(480, 320);
 	
+	connect(m_pButCommit_Gro1, SIGNAL(clicked()), this, SLOT(slot_previewCommit()));
+}
 
+void CCMConfigDlg::slot_previewCommit() {
+	emit sgl_addLog("commit success!");
 }

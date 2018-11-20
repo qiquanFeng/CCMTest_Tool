@@ -21,10 +21,14 @@ public:
 	dtCCMTest(QWidget *parent = 0);
 	~dtCCMTest();
 
+	//Database
+	QSqlDatabase m_configDatabase;
+
 signals:
 	void sgl_addLog(QString, QColor = QColor(0, 0, 0));
 protected:
 	QLabel *m_pLabStatus;
+	QPushButton *m_pButAddConfig;
 	QComboBox *m_pConfigCombox;
 
 	CCMLogBar *m_pCCMLog;

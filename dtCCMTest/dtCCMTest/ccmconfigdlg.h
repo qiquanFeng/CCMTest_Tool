@@ -13,9 +13,9 @@
 #include <QTextEdit>
 #include <QPushButton>
 #include <QPair>
+#include <QSqlDatabase>
+#include <QDir>
 #include "global_default.h"
-
-
 
 class CCMConfigDlg : public QDialog
 {
@@ -33,7 +33,14 @@ public:
 	static PAIRLIST loadINIGroup(QString group,QString origin,int format=0);
 	QSettings *m_pSetting;
 
+signals:
+	void sgl_addLog(QString, QColor = QColor(0, 0, 0));
+
 private:
+	//DataBase
+	QSqlDatabase &m_pDatabase;
+
+	//UI
 	QWidget *m_pWidGro0;
 	QWidget *m_pWidGro1;
 	QWidget *m_pWidGro2;
@@ -44,6 +51,9 @@ private:
 	QTextEdit *m_pTxtEdit_Gro1;
 	QPushButton *m_pButCommit_Gro1;
 	void createUI();
+
+	public slots:
+	void slot_previewCommit();
 };
 
 #endif // CCMCONFIGDLG_H

@@ -1,27 +1,34 @@
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\vc140.pdb
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\main.obj
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\moc_dtccmtest.obj
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\moc_ccmtest.obj
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.obj
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\ccmtest.obj
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\ccmconfigdlg.obj
+e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\moc_ccmviewcontrols.obj
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\moc_ccmconfigdlg.obj
+e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.obj
+e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\ccmviewcontrols.obj
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\qrc_dtccmtest.obj
+e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\ccmconfigdlg.obj
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\ui_dtccmtest.h
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\qrc_dtccmtest.cpp
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\ui_ccmtest.h
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\debug\moc_dtccmtest.cpp
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\debug\moc_ccmtest.cpp
+e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\debug\moc_ccmviewcontrols.cpp
 e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\debug\moc_ccmconfigdlg.cpp
-e:\github\ccm_test_fqq\dtccmtest\x64\debug\dtccmtest.ilk
-e:\github\ccm_test_fqq\dtccmtest\x64\debug\dtccmtest.exe
-e:\github\ccm_test_fqq\dtccmtest\x64\debug\dtccmtest.pdb
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\cl.command.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\cl.read.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\cl.write.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\custombuild.command.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\custombuild.read.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\custombuild.write.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\link.command.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\link.read.1.tlog
-e:\github\ccm_test_fqq\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\link.write.1.tlog
+e:\github\ccm_test_fqq\dtccmtest\dtccmtest\generatedfiles\debug\moc_dtccmtest.cpp
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\ccmconfigdlg.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\ccmviewcontrols.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\main.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\moc_ccmconfigdlg.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\moc_ccmviewcontrols.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\moc_dtccmtest.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\qrc_dtccmtest.obj
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\vc140.pdb
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\x64\debug\dtccmtest.pdb
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\cl.command.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\cl.read.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\cl.write.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\custombuild.command.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\custombuild.read.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\custombuild.write.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\link.command.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\link.read.1.tlog
+d:\work\source code\ccmtest_tool\ccmtest_tool\dtccmtest\dtccmtest\x64\debug\dtccmtest.tlog\link.write.1.tlog

@@ -1,0 +1,7 @@
+
+QLabel#imgview1:hover,QLabel#imgview2:hover{border:2px solid green;}
+
+QTableCornerButton::section:pressed{
+      background: red;
+      border: 2px outset red;
+  }

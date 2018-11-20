@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/dtCCMTest">
+        <file>Resources/Login.ico</file>
+    </qresource>
+</RCC>

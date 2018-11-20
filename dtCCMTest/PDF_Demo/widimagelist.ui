@@ -1,0 +1,23 @@
+<UI version="4.0" >
+ <class>WidImageList</class>
+ <widget class="QWidget" name="WidImageList" >
+  <property name="objectName" >
+   <string notr="true">WidImageList</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>400</width>
+	<height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>WidImageList</string>
+  </property>  
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</UI>

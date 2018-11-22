@@ -42,7 +42,6 @@ CCMConnectStatusBar::~CCMConnectStatusBar()
 {
 
 }
-
 void CCMConnectStatusBar::run() {
 
 	while (1) {
@@ -64,4 +63,22 @@ void CCMConnectStatusBar::run() {
 
 		::Sleep(1000);
 	}
+}
+
+CCMConfigSelectDlg::CCMConfigSelectDlg(QWidget *parent) 
+	:QDialog(parent),m_vlayMain(new QVBoxLayout()),m_comboRule(new QComboBox()),m_butAdd(new QPushButton(tr("Add"))),\
+	m_butSelect(new QPushButton(tr("select"))),m_labRule(new QLabel(tr("Config Rule:")))
+{
+	setLayout(m_vlayMain);
+	
+	m_vlayMain->addWidget(m_labRule);
+	m_vlayMain->addWidget(m_comboRule);
+	m_vlayMain->addWidget(m_butSelect);
+	m_vlayMain->addWidget(m_butAdd);
+	m_vlayMain->addStretch(5);
+
+	setFixedSize(300, 150);
+}
+CCMConfigSelectDlg::~CCMConfigSelectDlg() {
+
 }

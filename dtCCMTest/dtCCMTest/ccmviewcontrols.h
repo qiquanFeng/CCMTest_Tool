@@ -8,6 +8,10 @@
 #include <QTextEdit>
 #include <QDateTime>
 #include <QThread>
+#include <QDialog>
+#include <QComboBox>
+#include <QPushButton>
+
 #include "global_default.h"
 
 class CCMLogBar : public QDockWidget
@@ -48,5 +52,17 @@ protected:
 private:
 	int nDevNum;
 };
+class CCMConfigSelectDlg :public QDialog {
+	Q_OBJECT
+public:
+	CCMConfigSelectDlg(QWidget *parent = 0);
+	~CCMConfigSelectDlg();
+
+	QLabel *m_labRule;
+	QComboBox *m_comboRule;
+	QPushButton *m_butSelect, *m_butAdd;
+	QVBoxLayout *m_vlayMain;
+};
+
 
 #endif // CCMTEST_H

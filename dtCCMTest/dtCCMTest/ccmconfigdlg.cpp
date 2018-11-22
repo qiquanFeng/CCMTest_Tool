@@ -1,19 +1,13 @@
 #include "ccmconfigdlg.h"
+#include "dtccmtest.h"
 
 CCMConfigDlg::CCMConfigDlg(QWidget *parent)
-	: QDialog(parent), m_pTabGroup(new QTabWidget()),m_pDatabase(QSqlDatabase::addDatabase("QSQLITE","configDatabase"))
+	: QDialog(parent), m_pTabGroup(new QTabWidget()),m_pDatabase(((dtCCMTest*)parent)->m_configDatabase)
 {
 	createUI();
-	m_pSetting = new QSettings("D:/sensor.ini", QSettings::IniFormat);
-	bool bstatus = m_pSetting->contains("Sensor/width");
-	int i = 1;
 	
-	m_pDatabase.setDatabaseName(QDir::currentPath()+"/ConfigDatabase");
-	if (!m_pDatabase.open()) {
-		return;
-	}
+	m_strConfigName = dtCCMTest::getConfigNameFromDB(m_pDatabase);
 
-	return;
 }
 
 CCMConfigDlg::~CCMConfigDlg()
@@ -89,4 +83,7 @@ void CCMConfigDlg::createUI() {
 
 void CCMConfigDlg::slot_previewCommit() {
 	emit sgl_addLog("commit success!");
+	if (m_strConfigName.isEmpty())
+		emit sgl_addLog("config name Error", RGB(0, 0, 255));
+
 }

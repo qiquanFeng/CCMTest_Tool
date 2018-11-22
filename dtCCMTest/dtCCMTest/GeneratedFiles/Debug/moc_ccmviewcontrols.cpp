@@ -284,5 +284,73 @@ void CCMConnectStatusBar::sig_statuschange(int _t1)
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
+struct qt_meta_stringdata_CCMConfigSelectDlg_t {
+    QByteArrayData data[1];
+    char stringdata0[19];
+};
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_CCMConfigSelectDlg_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
+static const qt_meta_stringdata_CCMConfigSelectDlg_t qt_meta_stringdata_CCMConfigSelectDlg = {
+    {
+QT_MOC_LITERAL(0, 0, 18) // "CCMConfigSelectDlg"
+
+    },
+    "CCMConfigSelectDlg"
+};
+#undef QT_MOC_LITERAL
+
+static const uint qt_meta_data_CCMConfigSelectDlg[] = {
+
+ // content:
+       7,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+       0        // eod
+};
+
+void CCMConfigSelectDlg::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+const QMetaObject CCMConfigSelectDlg::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_CCMConfigSelectDlg.data,
+      qt_meta_data_CCMConfigSelectDlg,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+};
+
+
+const QMetaObject *CCMConfigSelectDlg::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
+}
+
+void *CCMConfigSelectDlg::qt_metacast(const char *_clname)
+{
+    if (!_clname) return Q_NULLPTR;
+    if (!strcmp(_clname, qt_meta_stringdata_CCMConfigSelectDlg.stringdata0))
+        return static_cast<void*>(const_cast< CCMConfigSelectDlg*>(this));
+    return QDialog::qt_metacast(_clname);
+}
+
+int CCMConfigSelectDlg::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QDialog::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    return _id;
+}
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

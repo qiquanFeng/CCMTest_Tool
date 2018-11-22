@@ -1,6 +1,7 @@
-QLabel{border:1px solid black;}
 QWidget#wid1{border:1px solid red;padding:300px;}
 QDockWidget::title{background-color:lightGray;}
 QPushButton#butPlay:hover{border:1px outset green;color:green;font-weight:bold;border-radius:100px;}
 QPushButton#butPlay:Pressed{border:1px solid red;font-weight:bold;border-radius:100px;background-color:lightGreen;}
 //QPushButton#butPlay{border:1px solid black;}
+//QLabel#rulelable{border:1px solid black;}
+//QPushButton#configselectbutton{border:1px solid black;}

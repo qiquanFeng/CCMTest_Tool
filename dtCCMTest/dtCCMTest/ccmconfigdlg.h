@@ -26,6 +26,8 @@ public:
 	~CCMConfigDlg();
 
 	QTabWidget *m_pTabGroup;
+	
+
 	/*
 	0: origin is FileName
 	1: origin is Data
@@ -39,6 +41,7 @@ signals:
 private:
 	//DataBase
 	QSqlDatabase &m_pDatabase;
+	QString m_strConfigName;
 
 	//UI
 	QWidget *m_pWidGro0;

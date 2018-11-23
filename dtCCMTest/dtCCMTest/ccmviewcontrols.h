@@ -52,17 +52,40 @@ protected:
 private:
 	int nDevNum;
 };
+
+class CCMConfigAddDlg :public QDialog {
+	Q_OBJECT
+public:
+	CCMConfigAddDlg(QSqlDatabase *database, QWidget *parent = 0);
+	~CCMConfigAddDlg();
+
+	QPushButton *m_pbutCommit;
+	QPushButton *m_pbutCancel;
+	QLabel *m_plabConfigName;
+	QLineEdit *m_pledConfigName;
+
+
+	public slots:
+	void slot_butCommit();
+	void slot_butCancel();
+};
+
 class CCMConfigSelectDlg :public QDialog {
 	Q_OBJECT
 public:
-	CCMConfigSelectDlg(QWidget *parent = 0);
+	CCMConfigSelectDlg(QWidget *parent);
 	~CCMConfigSelectDlg();
 
-	QLabel *m_labRule;
-	QComboBox *m_comboRule;
-	QPushButton *m_butSelect, *m_butAdd;
-	QVBoxLayout *m_vlayMain;
-};
+	QLabel *m_plabRule;
+	QComboBox *m_pcomboRule;
+	QPushButton *m_pbutSelect, *m_pbutAdd;
+	QVBoxLayout *m_pvlayMain;
+protected:
+	CCMConfigAddDlg *m_pConfigAddDlg;
 
+	public slots:
+	void slot_butSelect();
+	void slot_butAdd();
+};
 
 #endif // CCMTEST_H

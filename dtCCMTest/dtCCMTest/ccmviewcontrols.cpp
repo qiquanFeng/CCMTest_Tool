@@ -1,4 +1,6 @@
 #include "ccmviewcontrols.h"
+#include "dtccmtest.h"
+
 
 CCMLogBar::CCMLogBar(QWidget *parent)
 	: QDockWidget(parent)
@@ -66,19 +68,47 @@ void CCMConnectStatusBar::run() {
 }
 
 CCMConfigSelectDlg::CCMConfigSelectDlg(QWidget *parent) 
-	:QDialog(parent),m_vlayMain(new QVBoxLayout()),m_comboRule(new QComboBox()),m_butAdd(new QPushButton(tr("Add"))),\
-	m_butSelect(new QPushButton(tr("select"))),m_labRule(new QLabel(tr("Config Rule:")))
+	:QDialog(parent),m_pvlayMain(new QVBoxLayout()),m_pcomboRule(new QComboBox()),m_pbutAdd(new QPushButton(tr("Add"))),\
+	m_pbutSelect(new QPushButton(tr("select"))),m_plabRule(new QLabel(tr("Config Rule:"))), m_pConfigAddDlg(new CCMConfigAddDlg(this))
 {
-	setLayout(m_vlayMain);
+	setLayout(m_pvlayMain);
 	
-	m_vlayMain->addWidget(m_labRule);
-	m_vlayMain->addWidget(m_comboRule);
-	m_vlayMain->addWidget(m_butSelect);
-	m_vlayMain->addWidget(m_butAdd);
-	m_vlayMain->addStretch(5);
+	m_pvlayMain->addWidget(m_plabRule);
+	m_pvlayMain->addWidget(m_pcomboRule);
+	m_pvlayMain->addWidget(m_pbutSelect);
+	m_pvlayMain->addWidget(m_pbutAdd);
+	m_pvlayMain->addStretch(5);
 
 	setFixedSize(300, 150);
+	connect(m_pbutSelect, SIGNAL(clicked()), this, SLOT(slot_butSelect()));
+	connect(m_pbutAdd, SIGNAL(clicked()), this, SLOT(slot_butAdd()));
 }
 CCMConfigSelectDlg::~CCMConfigSelectDlg() {
+
+}
+void CCMConfigSelectDlg::slot_butSelect() {
+	dtCCMTest *pdtCCMTest = (dtCCMTest *)parent();
+	QSqlQuery query(pdtCCMTest->m_configDatabase);
+	query.prepare("update activeconfig set name = :name where 1");
+	query.bindValue(0, m_pcomboRule->currentText());
+	if (!query.exec()) {
+		QMessageBox::warning(this, "fail", tr("select rule fail!"));
+		emit pdtCCMTest->sgl_addLog(tr("select rule fail!"));
+	}
+}
+void CCMConfigSelectDlg::slot_butAdd() {
+	m_pConfigAddDlg->exec();
+}
+
+CCMConfigAddDlg::CCMConfigAddDlg(QSqlDatabase *database,QWidget *parent /* = 0 */) {
+
+}
+CCMConfigAddDlg::~CCMConfigAddDlg() {
+
+}
+void CCMConfigAddDlg::slot_butCommit() {
+
+}
+void CCMConfigAddDlg::slot_butCancel() {
 
 }

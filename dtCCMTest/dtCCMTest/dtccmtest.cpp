@@ -194,7 +194,6 @@ void dtCCMTest::slot_butSelectConfig() {
 	m_pConfigSelectDlg->exec();
 }
 void dtCCMTest::slot_butNewConfig_Add() {
-
 	if (m_pAddConfig_LineEdit->text().isEmpty()|| m_pAddConfig_LineEdit->text().trimmed().isEmpty()) {
 		QMessageBox::warning(m_pAddConfigDlg, "error", "name is empty!");
 		return;
